@@ -1,0 +1,42 @@
+Hard Random Game
+
+Player1, player2
+
+HP,Attack,Critic
+
+10 pull player1 - choose between increase HP/Attack/critic + random increase every pull
+10 pull player2 - choose between increase HP/Attack/critic + random increase every pull
+
+Start HP 1000
+Start Attack 50
+Start critic 5%
+
+Random increase
+HP 10-100
+Attack 1-10
+Critic 1-3%
+
+every player choose what to increase and then random increase in 10 pulls
+
+Fight -
+1v1
+Moves until one will be dead.
++ 10% miss chance????
+
+---
+zobrat potom vysledne hodnoty z metody nie z povodnej deklaracie
+vid getAtk.... prehodi do get atd 50
+
+
+stats do playera1 a 2
+nie ako rodica .. kazdy musi mat svoje stats
+
+
+
+CEKNIIIII AHOJ PROJEKT!!!!!!!!!!! zapni main a cekni Player1
+
+
+
+
+
+
