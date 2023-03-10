@@ -59,10 +59,10 @@ public class MainGame {
         while (i > 0 && j > 0) {
             int l1 = l;
             int k1 = k;
-            if (Math.random() * 100 < n) {
+            if (Math.random() * 100 < n) { // krit? player 2
                 l1 = l * 2;
             }
-            if (Math.random() * 100 < 10) {
+            if (Math.random() * 100 < 10) { // miss? 10% player 2
                 l1 = 0;
                 System.out.println("You miss");
             }
@@ -70,10 +70,10 @@ public class MainGame {
             System.out.println(player2.getName2() + " attacked " + l1 + " to " + player1.getName1());
             System.out.println(player1.getName1() + " your HP is " + i);
             System.out.println("---------------------------------");
-            if (Math.random() * 100 < m) {
+            if (Math.random() * 100 < m) { // krit? player 1
                 k1 = k * 2;
             }
-            if (Math.random() * 100 < 10) {
+            if (Math.random() * 100 < 10) { // miss? 10% player 1
                 k1 = 0;
                 System.out.println("You miss");
             }
