@@ -3,8 +3,12 @@ package sk.rudo.game;
 import sk.rudo.game.player.Player1;
 import sk.rudo.game.player.Player2;
 
+import java.util.Scanner;
+
 public class MainGame {
     public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
 
         Player1 player1 = new Player1();
         Player2 player2 = new Player2();
@@ -24,24 +28,21 @@ public class MainGame {
             player2.setName2();
         }
         System.out.println("Hello " + player2.getName2());
-        System.out.println("Lets game begin");
+        System.out.println("Player1: " + player1.getName1() + " your stats are: " + player1.getAttack() + " Attack, " + player1.getHitpoints() + " HP and " + player1.getCritical() + "% of Critical hit");
+        System.out.println("Player2: " + player2.getName2() + " your stats are: " + player2.getAttack() + " Attack, " + player2.getHitpoints() + " HP and " + player2.getCritical() + "% of Critical hit");
+        System.out.println("---------------------------------");
+        System.out.println("LET'S GAME BEGIN and increase your stats");
         System.out.println("You have 10 pick with random amount of stat increase");
+        System.out.println("---------------------------------");
         player1.playerOneRun();
+        System.out.println("---------------------------------");
+        System.out.println("---------------------------------");
         player2.playerTwoRun();
 
         System.out.println("---------------------------------");
-
-        System.out.println(player1.getName1());
-        System.out.println(player1.getAttack());
-        System.out.println(player1.getHitpoints());
-        System.out.println(player1.getCritical());
-
+        System.out.println(player1.getName1() + "´s stats: Attack " +player1.getAttack()+", HP: "+player1.getHitpoints()+", Critical chance: "+player1.getCritical()+"%");
+        System.out.println(player2.getName2() + "´s stats: Attack " +player2.getAttack()+", HP: "+player2.getHitpoints()+", Critical chance: "+player2.getCritical()+"%");
         System.out.println("---------------------------------");
-
-        System.out.println(player2.getName2());
-        System.out.println(player2.getAttack());
-        System.out.println(player2.getHitpoints());
-        System.out.println(player2.getCritical());
 
         int i = player1.getHitpoints();
         int j = player2.getHitpoints();
@@ -52,26 +53,33 @@ public class MainGame {
         int m = player1.getCritical();
         int n = player2.getCritical();
 
-        System.out.println(i +" "+j+" "+k+" "+l);
+        System.out.println("Press Enter to FIGHT");
+        String enter = scanner.nextLine();
 
-        while (i > 0 && j > 0){
+        while (i > 0 && j > 0) {
             int l1 = l;
             int k1 = k;
-            if (Math.random() * 100 < m) {
+            if (Math.random() * 100 < n) {
                 l1 = l * 2;
             }
             i -= l1;
-            if (Math.random() * 100 < n) {
+            System.out.println(player2.getName2() + " attacked " + l1 + " to " + player1.getName1());
+            System.out.println(player1.getName1() + " your HP is " + i);
+            System.out.println("---------------------------------");
+            if (Math.random() * 100 < m) {
                 k1 = k * 2;
             }
             j -= k1;
-            System.out.println(i + " " + j);
+            System.out.println(player1.getName1() + " attacked " + k1 + " to " + player2.getName2());
+            System.out.println(player2.getName2() + " your HP is " + j);
+            System.out.println("---------------------------------");
         }
-
-        if (i < 0) {
-            System.out.println("Player 2 WON");
+        if (i < 0 && j < 0) {
+            System.out.println("It´s a TIE, GG");
+        } else if (i < 0) {
+            System.out.println("Player 2: " + player2.getName2() +" WON, GG");
         } else {
-            System.out.println("Player 1 WON");
+            System.out.println("Player 1: " + player1.getName1()+ " WON, GG");
         }
     }
 }
