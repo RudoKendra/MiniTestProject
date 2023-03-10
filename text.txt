@@ -24,19 +24,3 @@ Moves until one will be dead.
 + 10% miss chance????
 
 ---
-zobrat potom vysledne hodnoty z metody nie z povodnej deklaracie
-vid getAtk.... prehodi do get atd 50
-
-
-stats do playera1 a 2
-nie ako rodica .. kazdy musi mat svoje stats
-
-
-
-CEKNIIIII AHOJ PROJEKT!!!!!!!!!!! zapni main a cekni Player1
-
-
-
-
-
-
