@@ -62,13 +62,13 @@ public class Player2 {
             System.out.println("Choose Skill to increase " + name2);
             System.out.println("A = Attack, H = Hitpoints, C = Critic");
             String increase = scanner.nextLine();
-            if ("a".equals(increase)) {
+            if ("a".equalsIgnoreCase(increase)) {
                 setAttack(getAttack() + rna.RndmAtk());
                 System.out.println("You increase your Attack and your attack is " + getAttack() + " now");
-            } else if ("h".equals(increase)) {
+            } else if ("h".equalsIgnoreCase(increase)) {
                 setHitpoints(getHitpoints() + rnh.RndmHp());
                 System.out.println("You increase your Hitpoints and your hitpoints are " + getHitpoints() + " now");
-            } else if ("c".equals(increase)) {
+            } else if ("c".equalsIgnoreCase(increase)) {
                 setCritical(getCritical() + rnc.RndmCrit());
                 System.out.println("You increase Your CriticalHit and your critical is " + getCritical() + "% now");
             }

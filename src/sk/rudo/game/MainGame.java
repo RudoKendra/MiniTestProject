@@ -12,9 +12,17 @@ public class MainGame {
         System.out.println("Hello, welcome to 1vs1 random pvp Game");
         System.out.println("First enter name player one: ");
         player1.setName1();
+        while (player1.getName1().isBlank()) {
+            System.out.println("First enter name player one: ");
+            player1.setName1();
+        }
         System.out.println("Hello " + player1.getName1());
-        System.out.println("Enter name for player two");
+        System.out.println("Enter name for player two: ");
         player2.setName2();
+        while (player2.getName2().isBlank()) {
+            System.out.println("Enter name for player two: ");
+            player2.setName2();
+        }
         System.out.println("Hello " + player2.getName2());
         System.out.println("Lets game begin");
         System.out.println("You have 10 pick with random amount of stat increase");
