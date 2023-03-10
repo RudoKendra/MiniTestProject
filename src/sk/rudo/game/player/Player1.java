@@ -21,7 +21,7 @@ public class Player1 {
 
     int hitpoints = 1000;
     int attack = 50;
-    int critical = 5;
+    int critical = 10;
 
     public int getHitpoints() {
         return hitpoints;

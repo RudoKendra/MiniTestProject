@@ -5,6 +5,6 @@ import java.util.Random;
 public class RandomNumberAtk {
     public int RndmAtk() {
         Random random = new Random();
-        return random.nextInt(10) + 1;
+        return random.nextInt(5) + 3;
     }
 }
