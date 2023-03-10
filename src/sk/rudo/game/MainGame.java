@@ -62,12 +62,20 @@ public class MainGame {
             if (Math.random() * 100 < n) {
                 l1 = l * 2;
             }
+            if (Math.random() * 100 < 10) {
+                l1 = 0;
+                System.out.println("You miss");
+            }
             i -= l1;
             System.out.println(player2.getName2() + " attacked " + l1 + " to " + player1.getName1());
             System.out.println(player1.getName1() + " your HP is " + i);
             System.out.println("---------------------------------");
             if (Math.random() * 100 < m) {
                 k1 = k * 2;
+            }
+            if (Math.random() * 100 < 10) {
+                k1 = 0;
+                System.out.println("You miss");
             }
             j -= k1;
             System.out.println(player1.getName1() + " attacked " + k1 + " to " + player2.getName2());
